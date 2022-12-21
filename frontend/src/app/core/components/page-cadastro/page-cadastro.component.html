@@ -1,0 +1,32 @@
+
+<div mat-dialog-content>
+    <form class="example-form" [formGroup]="dogForm">
+        <h1 mat-dialog-title>New PET</h1>
+       <p> <mat-form-field class="example-full-width">
+            <mat-label>Pets Name</mat-label>
+            <input matInput placeholder="name" formControlName="nome" name="nome">
+        </mat-form-field></p>
+
+        <p> <mat-form-field class="example-full-width">
+            <mat-label>Pets Breed</mat-label>
+            <input matInput placeholder="breed" formControlName="raca" name="raca">
+        </mat-form-field></p>
+
+        <p><mat-form-field class="example-full-width">
+            <mat-label>Pets Age</mat-label>
+            <input matInput placeholder="age" formControlName="idade" name="idade">
+        </mat-form-field></p>
+        <p><mat-form-field class="example-full-width">
+            <mat-label>Pets Size</mat-label>
+            <input matInput placeholder="size" formControlName="porte" name="porte">
+        </mat-form-field></p>
+        <div class="form-group submit-button">
+
+            <p><button mat-flat-button color="accent" [disabled]="dogForm.invalid" (click)="onSubmit(dogForm)">
+              Submit
+            </button></p>
+          </div>
+    </form>
+</div>
+
+

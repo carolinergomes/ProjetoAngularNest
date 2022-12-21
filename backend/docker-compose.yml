@@ -1,0 +1,46 @@
+version: '3'
+services:
+  # nginx-app:
+  #   image: nginx
+  # node:
+  #   build:
+  #     dockerfile: ./docker/node.dockerfile
+  #     context: .
+  #   image: node
+  #   container_name: node_docker
+  #   ports:
+  #     - 3000:3000
+  #   #     networks:
+  #   #         - development-network
+  #   volumes:
+  #     - .:/home/node/app
+
+  #   depends_on:
+  #     - mysql
+
+  mysqldb:
+    image: mysql:5.7.39
+    container_name: mysql_todolist
+    # networks:
+    #   - development-network
+    environment:
+      MYSQL_RANDOM_ROOT_PASSWORD: 1
+      MYSQL_DATABASE: todolist
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin
+    ports:
+      - '5300:3306'
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+
+# networks:
+#   development-network:
+#     driver: bridge
+
+# volumes:
+#   mysql_data:
+#     driver: local

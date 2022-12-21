@@ -1,0 +1,31 @@
+.content-dashboard{
+    background-color: white;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 9%;
+
+}
+  @media only screen and (max-width: 1200px) {
+    .card-container {
+        width: 400px;
+        height: 400;
+
+    }
+  }
+  @media only screen and (max-width: 800px) {
+    .card-container {
+        width: 400px;
+        height: 400px;
+
+    }
+  }
+

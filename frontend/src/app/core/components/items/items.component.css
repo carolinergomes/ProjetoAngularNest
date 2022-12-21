@@ -1,0 +1,14 @@
+.items {
+    width: 10%;
+}
+.itemsDiv {
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+    background-color: aqua;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
